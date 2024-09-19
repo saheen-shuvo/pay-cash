@@ -33,7 +33,7 @@
             </div>
             <div class="divider"></div>
             <!-- Add Money Form -->
-            <form class="card-body">
+            <form class="hidden card-body">
                 <div class="form-control">
                   <label class="label">
                     <span class="label-text">Amount</span>
@@ -50,10 +50,29 @@
                   <button id="btn-add-money" class="btn btn-primary">Add Money</button>
                 </div>
               </form>
+              <!-- Cash Out Form -->
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Cash Out Amount</span>
+                  </label>
+                  <input id="input-cash-out" type="text" placeholder="Enter Amount" class="input input-bordered" required />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">PIN</span>
+                  </label>
+                  <input id="input-cash-out-pin-number" type="password" placeholder="Enter PIN" class="input input-bordered" required />
+                </div>
+                <div class="form-control mt-6">
+                  <button id="btn-cash-out" class="btn btn-primary">Cash Out</button>
+                </div>
+              </form>
           </div>
         </div>
       </div>
     </main>
     <script src="./js/home.js"></script>
+    <script src="./js/cash-out.js"></script>
   </body>
 </html>

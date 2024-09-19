@@ -1,11 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pay Cash Home Page</title>
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
     <h1>Welcome to Home Page</h1>
-</body>
+    <main class="flex items-center">
+      <div class="mockup-phone">
+        <div class="camera"></div>
+        <div class="display">
+          <div class="artboard artboard-demo phone-2">
+            <!-- Available Balance -->
+            <div class="stats shadow mt-8 mr-auto ml-2"> <!--Margin Added-->
+              <div class="stat">
+                <div class="stat-value">6200</div>
+                <div class="stat-desc">Available Balance</div>
+              </div>
+            </div>
+            <div class="divider"></div>
+              <!-- User Action BUtton -->
+              <div>
+              <button class="btn btn-lg">Add Money</button>
+              <button class="btn btn-lg">Cash Out</button>
+            </div>
+            <div class="divider"></div>
+            <!-- Add Money Form -->
+            <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Amount</span>
+                  </label>
+                  <input id="phone-number" type="text" placeholder="Enter Amount" class="input input-bordered" required />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">PIN</span>
+                  </label>
+                  <input id="pin-number" type="password" placeholder="Enter PIN" class="input input-bordered" required />
+                </div>
+                <div class="form-control mt-6">
+                  <button id="btn-login" class="btn btn-primary">Add Money</button>
+                </div>
+              </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./js/home.js"></script>
+  </body>
 </html>

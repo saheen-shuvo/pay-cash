@@ -13,6 +13,11 @@ document
     const pinNumberInput = document.getElementById("input-pin-number").value;
     console.log(pinNumberInput);
     // Step3: Validate pin number
+    // NaN verify
+    if(isNaN(addMoneyInput)){
+      alert('Failed to Add Money.')
+      return;
+    }
     if (pinNumberInput === "1234") {
       console.log("Adding money to your account");
       // Step4: Get the current balance
@@ -26,6 +31,14 @@ document
       console.log(newBalance);
       // Step6: Update the balance in the DOM
       document.getElementById("account-balance").innerText = newBalance;
+
+      //Add to transaction History
+      const p = document.createElement("p");
+      p.classList.add('bg-green-500')
+      p.innerText = `Added: ${addMoneyNumber} Tk. New Balance: ${newBalance}`;
+      // Add to transaction list
+      document.getElementById("transaction-container").appendChild(p);
+      console.log(p);
     } else {
       alert("Failed to add money. Please try again.");
     }

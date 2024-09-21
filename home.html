@@ -18,24 +18,33 @@
         <div class="display">
           <div class="artboard artboard-demo phone-2">
             <!-- Available Balance -->
-            <div class="stats shadow mt-8 mr-auto ml-2"> <!--Margin Added-->
-              <div class="stat">
-                <div id="account-balance" class="stat-value">6200</div>
-                <div class="stat-desc">Available Balance</div>
+             <div class="flex w-full justify-between">
+              <div class="stats shadow mt-8  ml-2">
+                <div class="stat">
+                  <div id="account-balance" class="stat-value">6200</div>
+                  <div class="stat-desc">Available Balance</div>
+                </div>
               </div>
-            </div>
+              <div class="mt-11 mr-6">
+                <h1 class="text-center mt-1 italic font-bold text-2xl text-blue-700">PayCash</h1>
+                <p class="text-center italic text-gray-400 text-[10px]">powered by saheen_shuvo</p>
+              </div>
+             </div>
             <div class="divider"></div>
               <!-- User Action BUtton -->
-              <div>
-              <button id="btn-show-add-money" class="btn btn-lg bg-green-500 text-white">Add Money</button>
-              <button id="btn-show-cash-out" class="btn btn-lg bg-orange-500 text-white">Cash Out</button>
+              <div class="flex w-full">
+              <button id="btn-show-add-money" class="btn btn-lg bg-green-500 text-white w-[50%]">Add Money</button>
+              <button id="btn-show-cash-out" class="btn btn-lg bg-orange-500 text-white w-[50%]">Cash Out</button>
+            </div>
+            <div class="w-full">
+              <button id="btn-show-transaction-history" class="btn btn-lg bg-purple-500 text-white w-full">Transaction History</button>
             </div>
             <div class="divider"></div>
             <!-- Add Money Form -->
             <form id="form-add-money" class="card-body">
                 <div class="form-control">
                   <label class="label">
-                    <span class="label-text">Amount</span>
+                    <span class="label-text">Add Money Amount</span>
                   </label>
                   <input id="input-add-money" type="text" placeholder="Enter Amount" class="input input-bordered" required />
                 </div>
@@ -67,6 +76,13 @@
                   <button id="btn-cash-out" class="btn btn-primary">Cash Out</button>
                 </div>
               </form>
+              <!-- Transaction History Section -->
+               <div id="section-transaction-history" class="hidden h-[47%]">
+                <h1 class="text-xl font-semibold text-center">Transaction History</h1>
+                <div id="transaction-container">
+
+                </div>
+               </div>
           </div>
         </div>
       </div>

@@ -15,11 +15,21 @@ document
     ).value;
     console.log(cashOutPinNumberInput);
     // Step3: Validate pin number
+        // NaN verify
+        if(isNaN(cashOutInput)){
+          alert('Failed to Cash Out.')
+          return;
+        }
     if (cashOutPinNumberInput === "1234") {
       console.log("Cash Out  is processing.");
       // Step4: Get the current balance
       const balance = document.getElementById("account-balance").innerText;
       console.log(balance);
+            // Prevent Negative Balance
+            if(cashOutInput > balance){
+              alert("You have insufficient balance.");
+              return;
+            }
       // Step5: Substract cashOutMoneyInput from the balance
       // convert string to float number
       const cashOutMoneyNumber = parseFloat(cashOutInput);
@@ -28,6 +38,14 @@ document
       console.log(newBalance);
       // Step6: Update the balance in the DOM
       document.getElementById("account-balance").innerText = newBalance;
+
+            //Add to transaction History
+            const p = document.createElement("p");
+            p.classList.add('bg-red-500')
+            p.innerText = `Cash Out: ${cashOutMoneyNumber} Tk. New Balance: ${newBalance}`;
+            // Add to transaction list
+            document.getElementById("transaction-container").appendChild(p);
+            console.log(p);
     } else {
       alert("Failed to cash out. Please try again.");
     }
